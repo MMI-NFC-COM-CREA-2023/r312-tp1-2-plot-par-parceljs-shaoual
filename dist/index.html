@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>tp 2</title>
+  </head>
+
+
+
+  <body>
+    <h1>TP 2</h1>
+    <div id="myplot"></div>
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+<script type="module">
+
+  const plot = Plot.plot({
+    aspectRatio: 1,
+    inset: 10,
+    grid: true,
+    marks: [
+      Plot.text(d3.range(151).map((i) => [
+        Math.sqrt(i) * Math.sin(i / 10),
+        Math.sqrt(i) * Math.cos(i / 10)
+      ]))
+    ]
+  })
+  
+  const div = document.querySelector("#myplot");
+  div.append(plot);
+
+
+</script>
+  <script src="/r312-tp1-2-plot-par-parceljs-Shaoual.895e17d5.js">
+  </script>
+  
+</body>
+</html>
